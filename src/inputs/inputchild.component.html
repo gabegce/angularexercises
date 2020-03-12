@@ -1,0 +1,11 @@
+<h6>Start child template</h6>
+<div class="callout">
+    <b>Child component eement attributes in parent:</b>
+    childTextIn = {{ childTextIn }},
+    childVariableIn = {{ childVariableIn }}
+    <!-- -->
+        <dog-list [dogsToChildAgain]='dogsFromParent'></dog-list>
+    
+    <ng-content></ng-content>
+</div>
+<h6>End child template.</h6>

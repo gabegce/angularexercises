@@ -1,0 +1,13 @@
+h6 {
+    font-size:2rem;
+    color:blue;
+    font-weight:bold;
+}
+
+h1 {
+    font-weight:bold;
+}
+
+.success {
+    background-color: greenyellow;
+}

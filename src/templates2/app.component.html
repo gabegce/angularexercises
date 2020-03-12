@@ -1,0 +1,16 @@
+<h1>Templates 2</h1>
+<div class="callout" [style.border]="needsBorder ? '5px solid red' : 'none'"
+    [ngClass]="{
+        success : isSuccess,
+        warning : !isSuccess,
+        hide : isHidden,
+        'small-4' : isFourColumns
+    }"
+><p>{{ 'The interpolated template in this ' + title | uppercase }}</p>
+    <div>The property1 is going to have a value of {{ property1 }}</div>
+    <div>Well now this is for property 1 {{ (property2 || 'not there') }}</div>
+    <img [src]='src' [alt]='alt' [title]='title' #dogs>
+    My caption for dogs is {{ dogs.alt }}
+</div>
+
+<h6>Now at version 9, so cool!</h6>

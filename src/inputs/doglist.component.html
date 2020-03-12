@@ -1,0 +1,9 @@
+<h6>Start doglist template</h6>
+<div><b>Dog Listing:</b>
+    <span *ngFor="let aDog of dogsFromParent">
+        <span class="label">
+            <span>paw print</span>
+            <dog-name [dogNameIn]='aDog'></dog-name>
+        </span>
+    </span>
+</div>

@@ -1,0 +1,14 @@
+h6 {
+    font-size:2rem;
+    color:blue;
+    font-weight:bold;
+}
+
+h1 {
+    font-weight:bold;
+}
+
+img {
+    max-height:300px;
+    transform: rotate(20deg);
+}

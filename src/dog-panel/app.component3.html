@@ -1,0 +1,21 @@
+<h1>Dog Panel v3</h1>
+<img [src]='dog.imgUrl'>
+<h6>Now at version 9, so cool! {{ dog.name }} {{ dog.lastOfficeVisit?.toDateString() || 'never' }}, and he is a {{ dog.gender }}</h6>
+<div class="row">
+    <div *ngFor="let dog of mockDogs; let i = index" class="success callout small-4 columns">
+        <h3>{{ dog.name }} #{{ i + 1 }} of {{ mockDogs.length }}</h3>
+        <p>With balance of ${{ dog.balance }}</p>
+        <span *ngIf="dog.isSenior">A SENIOR!</span>
+        <span *ngIf="dog.balance > 2">Kinda expensive</span> 
+        <span [ngSwitch]="dog.examType">
+            <span *ngSwitchCase="'checkup'">Just a checkup</span>
+            <span *ngSwitchCase="'routine'">Routine stuff</span>
+            <span *ngSwitchCase="'major'">MAJOR!</span>
+            <span *ngSwitchCase="'complete'">All complete!</span>
+            <span *ngSwitchDefault>DEFAULT :)!</span>
+        </span>
+        <p>Last in the office: {{ (dog.lastOfficeVisit | date:'longDate') || 'never' }}</p>
+        <p *ngIf="dog.balance > 0">{{ dog.balance | currency:'USD':true:'1.2-2' }}</p>
+        <div [innerHTML]="delayedMessage | async"></div>
+    </div>
+</div>
